@@ -12,6 +12,8 @@ Write a function that converts a 12-hour time to a 24-hour time format. The func
 
 Write a function that takes three integers, `a`, `b`, and `c` as arguments and returns `True` if exactly two of the three integers are positive numbers (greater than zero), and `False` otherwise.
 
+
+
 ### Challenge 3: Consonant value
 
 Given a lowercase string with alphabetic characters only and no spaces, return the highest value of consonant substrings. Consonants are any letters of the alphabet except "aeiou." Assign values to consonants, where a = 1, b = 2, ..., z = 26.
@@ -22,6 +24,3 @@ Given a lowercase string with alphabetic characters only and no spaces, return t
 
 ```bash
 git clone <git@github.com:Mariegacheri/IP01-Wk1-Code-Challenge.git>
-
-## Author
-Mary Mwangi,
