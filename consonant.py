@@ -36,4 +36,4 @@ def Value_adder(word):
     return max_value
 
 
-print(Value_adder(""))#put any word inside the quotations
+print(Value_adder(""))#put any word inside the quotations  

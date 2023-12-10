@@ -1,39 +1,33 @@
-def Value_adder(word):
-    # Define vowels
-    vowels = 'aeiou'
-    # Initialize an empty list to store consonants
-    consonant_list = []
-    # Initialize an empty string to build the current consonant substring
-    current_string = ''
+def bool_check(num1, num2, num3):
+    # Create a list containing the input numbers
+    num_list = [num1, num2, num3]
 
-    # Iterate through each character in the input word
-    for char in word:
-        # Check if the character is not a vowel
-        if char not in vowels:
-            # If not a vowel, append the character to the current substring
-            current_string += char
-        else:
-            if current_string:
-                # Append the current substring to the list
-                consonant_list.append(current_string)
-            current_string = ''
+    def checker(nums):
+        # Initialize an empty list for storing True or False 
+        results = []
+        for digit in nums:
+            # Check if the digit is less than or equal to 0
+            if digit <= 0:
+                # Append False to results 
+                results.append("False")
+            else:
+                # Append True to resluts
+                results.append('True')
+        return results
 
-    # Handle  when the last character in the word is a consonant
-    if current_string:
-        consonant_list.append(current_string)
+    results = checker(num_list)
 
-    # Initialize max value to have a value of 0
-    max_value = 0
-    for substring in consonant_list:
-        value = 0
-        for char in substring:
-            # Calculate the  value of the character and add it to the total value
-            value += ord(char) - ord('a') + 1
-        # Update the maximum value with the maximum of its current value and the value of the current substring
-        max_value = max(max_value, value)
+    # Count the number of true or false
+    result_true = results.count('True')
+    result_false = results.count("False")
 
-    # Return the maximum value of all consonant substrings
-    return max_value
+    # if else statement for checking if false=1 and true=2
+    if result_true == 2 and result_false == 1:
+        print("True")
+        return "True"
+    else:
+        print("False")
+        return "False"
 
 
-print(Value_adder(""))#put any word inside the quotations
+bool_check(8, -1, 8)
